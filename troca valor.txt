@@ -1,0 +1,22 @@
+● Crie uma função que não retorne valores e
+que receba 2 números inteiro e faça a troca
+de posição. Ex. Se o usuário digitou 4, 5 a
+função deve retornar 5 e 4.
+
+#include <stdio.h>
+
+void troca_valor(int *num1, int *num2){
+    int temp = *num1;
+    *num1=*num2;
+    *num2= temp;
+}
+int main() {
+    int num1, num2;
+    printf("Digite dois numeros separados por virgula:\n");
+    scanf("%d,%d", &num1,&num2);
+    
+    troca_valor(&num1,&num2);
+    
+    printf ("num1: %d\nnum2: %d",num1,num2);
+    return 0;
+}
